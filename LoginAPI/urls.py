@@ -11,7 +11,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_api'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh_api'),
-    path('account/', include('Account.urls'))
+    path('account/', include('Account.urls')),
+    path('contact/', include('Contact.urls')),
 ]
 urlpatterns +=staticfiles_urlpatterns()
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
