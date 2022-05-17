@@ -13,6 +13,7 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh_api'),
     path('account/', include('Account.urls')),
     path('contact/', include('Contact.urls')),
+    path('agent/', include('Agent.urls')),
 ]
 urlpatterns +=staticfiles_urlpatterns()
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
