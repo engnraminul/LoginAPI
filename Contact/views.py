@@ -6,6 +6,7 @@ from .serializers import ContactSerializer
 from .models import Contact
 
 class ContactAPIView(APIView):
+    permission_classes=[permissions.AllowAny,]
     def get(self, request, format=None):
         contact = Contact.objects.all()
         serializer = ContactSerializer(contact, many=True)
